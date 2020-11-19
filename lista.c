@@ -22,7 +22,7 @@ lista_t *lista_cria(int capacidade)
         }
     }
 
-    return NULL;
+    return -1;
 }
 
 void lista_destroi(lista_t **l)
@@ -56,7 +56,7 @@ int lista_tamanho(lista_t *l)
     {
         return l->elementos;
     }
-    return NULL;
+    return -1;
 }
 
 int lista_capacidade(lista_t *l)
@@ -65,7 +65,7 @@ int lista_capacidade(lista_t *l)
     {
         return l->capacidade;
     }
-    return NULL;
+    return -1;
 }
 int lista_cheia(lista_t *l)
 {
