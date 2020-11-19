@@ -306,26 +306,97 @@ int lista_busca_info(lista_t *l, tipo dado)
 
 int lista_frequencia_info(lista_t *l, tipo dado)
 {
-    return NULL;
+    int count = 0;
+
+    if (l != NULL)
+    {
+        if (l->data != NULL)
+        {
+            if (l->elementos > 0)
+            {
+                for (int i = 0; i < l->elementos - 1; i++)
+                {
+                    if (dado == l->data[i])
+                    {
+                        count++;
+                    }
+                }
+            }
+            return count;
+        }
+    }
+    return -1;
 }
+
 int lista_ordenada(lista_t *l)
 {
+    //escolher qual modo fazer
     return NULL;
 }
+
 int lista_insere_ordenado(lista_t *l, tipo dado)
 {
-    return NULL;
+    if (l != NULL)
+    {
+        if (l->data != NULL)
+        {
+            if (l->elementos > 0)
+            {
+                int i = 0 while (i < l->elementos - 1 && dado >= l->data[i])
+                {
+                    i++;
+                }
+
+                return lista_insere_posicao(l, dado, i);
+            }
+        }
+    }
+    return -1;
 }
+
 int lista_compara(lista_t *l1, lista_t *l2)
 {
-    return NULL;
+    if (l1 != NULL && l2 != NULL)
+    {
+        if (l1->data != NULL && l2->data != NULL)
+        {
+            if (l1->elementos == l2->elementos)
+            {
+                for (int i = 0; i < l1->elementos; i++)
+                {
+                    if (l1->data[i] != l2->data[i])
+                    {
+                        return 0;
+                    }
+                }
+                return 1;
+            }
+            
+            return 0;
+        }
+        else if (l1->data == NULL && l2->data == NULL)
+        {
+            return 1;
+        }
+
+        return 0;
+    }
+    else if (l1 == NULL && l2 == NULL)
+    {
+        return 1;
+    }
+    
+    return 0;
 }
+
 int lista_reverte(lista_t *l)
 {
     return NULL;
 }
+
 lista_t *lista_cria_copia(lista_t *l)
 {
     return NULL;
 }
+
 #endif
