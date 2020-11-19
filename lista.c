@@ -108,7 +108,7 @@ int lista_info_cauda(lista_t *l, int *dado)
         {
             if (l->elementos > 0)
             {
-                if (*dado == l->elementos[l->elementos - 1])
+                if (*dado == l->data[l->elementos - 1])
                 {
                     return 1;
                 }
@@ -128,7 +128,7 @@ int lista_info_posicao(lista_t *l, int *dado, int pos)
         {
             if (l->elementos > 0 && pos >= 0 && pos > l->elementos)
             {
-                if (*dado == l->elementos[pos])
+                if (*dado == l->data[pos])
                 {
                     return 1;
                 }
@@ -342,7 +342,8 @@ int lista_insere_ordenado(lista_t *l, tipo dado)
         {
             if (l->elementos > 0)
             {
-                int i = 0 while (i < l->elementos - 1 && dado >= l->data[i])
+                int i = 0 ;
+								while (i < l->elementos - 1 && dado >= l->data[i])
                 {
                     i++;
                 }
