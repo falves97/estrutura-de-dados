@@ -22,7 +22,7 @@ lista_t *lista_cria(int capacidade)
         }
     }
 
-    return -1;
+    return NULL;
 }
 
 void lista_destroi(lista_t **l)
@@ -331,7 +331,7 @@ int lista_frequencia_info(lista_t *l, tipo dado)
 int lista_ordenada(lista_t *l)
 {
     //escolher qual modo fazer
-    return NULL;
+    return -1;
 }
 
 int lista_insere_ordenado(lista_t *l, tipo dado)
@@ -392,7 +392,7 @@ int lista_compara(lista_t *l1, lista_t *l2)
 
 int lista_reverte(lista_t *l)
 {
-    return NULL;
+    return -1;
 }
 
 lista_t *lista_cria_copia(lista_t *l)
