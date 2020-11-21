@@ -4,6 +4,7 @@
 
 lista_t* criar(void);
 void destruir(lista_t *);
+void inserir(lista_t *l);
 
 int main(int argc, char const *argv[])
 {
@@ -17,6 +18,7 @@ int main(int argc, char const *argv[])
 		printf("2 - destruir\n");
 		printf("3 - está inicializada\n");
 		printf("4 - tamanho\n");
+		printf("5 - inserir\n");
 
 		scanf("%d", &op);
 
@@ -34,6 +36,12 @@ int main(int argc, char const *argv[])
 				else {
 					printf("lista nao inicializada\n");
 				}
+			break;
+			case 4:
+				printf("Tamanho: %d\n", lista_tamanho(l));
+			break;
+			case 5:
+				inserir(l);
 			break;
 		}
 	}while(op != 0);
@@ -61,5 +69,15 @@ void destruir(lista_t *l) {
 	lista_destroi(l);
 	if(l == NULL) {
 		printf("lista destruída\n");
+	}
+}
+
+void inserir(lista_t *l) {
+	int r = lista_insere_cauda(l, 3);
+	if(r == 1) {
+		printf("inserido\n");
+	}
+	else {
+		printf("nao inserido\n");
 	}
 }

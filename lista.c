@@ -71,7 +71,7 @@
     {
         if (l != NULL)
         {
-            if (l->capacidade >= l->elementos)
+            if (l->elementos >= l->capacidade)
             {
                 return 1;
             }
