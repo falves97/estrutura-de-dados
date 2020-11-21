@@ -13,7 +13,7 @@
     #ifndef _lista_c_
         #define _lista_c_
         lista_t	*lista_cria(int capacidade);
-        void lista_destroi(lista_t **l);
+        void lista_destroi(lista_t *l);
         int lista_inicializada(lista_t *l);
         int lista_tamanho(lista_t *l);
         int lista_capacidade(lista_t *l);
@@ -38,7 +38,7 @@
         lista_t *lista_cria_copia(lista_t *l);
     #else
         extern lista_t	*lista_cria(int capacidade);
-        extern void lista_destroi(lista_t **l);
+        extern void lista_destroi(lista_t *l);
         extern int lista_inicializada(lista_t *l);
         extern int lista_tamanho(lista_t *l);
         extern int lista_capacidade(lista_t *l);

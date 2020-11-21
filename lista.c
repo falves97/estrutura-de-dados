@@ -25,16 +25,16 @@
         return NULL;
     }
 
-    void lista_destroi(lista_t **l)
+    void lista_destroi(lista_t *l)
     {
-        if ((*l) != NULL)
+        if (l != NULL)
         {
-            if ((*l)->data != NULL)
+            if (l->data != NULL)
             {
-                free((*l)->data);
+                free(l->data);
             }
-            free((*l));
-            (*l) = NULL;
+            free(l);
+            l = NULL;
         }
     }
 
