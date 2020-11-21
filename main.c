@@ -7,7 +7,7 @@ void destruir(lista_t *);
 
 int main(int argc, char const *argv[])
 {
-	lista_t *l;
+	lista_t *l = NULL;
 	int op;
 
 	do {
